@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(K8lDBYU\ -\ Imgur.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+}
+#cabeçalho{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(105, 95, 95, 0);
+    border: 2px solid #1e1d1d;
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+}
+#cabeçalho.desfoque {
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#txt1{
+    padding-top: 10px;
+    padding-left: 60px;
+    font-size: 20px;
+}
+#btnlc{
+    padding-top: 10px;
+    padding-left: 20vh;
+}
+#btn{
+    background-color: rgb(224, 163, 246);
+    width: 120px;
+    height: 25px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.janela-modal{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color:  rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.modal{
+    width: 60%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: #fff;
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 20px;
+}
+.fechar{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #e72a2a;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.janela-modal.abrir{
+    display: grid;
+}
+
+@keyframes abrirmodal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+.abrir .modal{
+    animation: abrirmodal 0.8s;
+}
